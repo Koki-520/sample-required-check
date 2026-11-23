@@ -1,0 +1,11 @@
+name: Sample check
+on: [pull_request]
+permissions:
+  contents: read
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check sample
+        run: grep -Fxq PASS sample.txt
