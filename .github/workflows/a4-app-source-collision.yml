@@ -1,0 +1,14 @@
+name: A4 source collision test
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  collision:
+    name: school-independent-gate
+    if: startsWith(github.head_ref, 'a4-app-source-collision-20261124')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate same-name success from GitHub Actions only
+        run: echo "TEST ONLY - not the independent GitHub App"
