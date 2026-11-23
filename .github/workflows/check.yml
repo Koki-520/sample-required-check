@@ -9,10 +9,3 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check sample
         run: grep -Fxq PASS sample.txt
-  source-control:
-    name: school-independent-gate
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check sample with Actions
-        run: grep -Fxq PASS sample.txt
